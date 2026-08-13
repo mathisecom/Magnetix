@@ -334,21 +334,30 @@
         "image_MAmFrT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Digital_Trends_1.webp",
             "url": ""
           }
         },
         "image_6EQV6e": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Forbes.avif",
             "url": ""
           }
         },
         "image_zTeRQw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/HowToGeek_1.avif",
+            "url": ""
+          }
+        },
+        "image_b6VQ6P": {
+          "type": "image",
+          "settings": {
+            "url": ""
+          }
+        },
+        "image_QLc7kY": {
+          "type": "image",
+          "settings": {
             "url": ""
           }
         }
@@ -356,7 +365,9 @@
       "block_order": [
         "image_MAmFrT",
         "image_6EQV6e",
-        "image_zTeRQw"
+        "image_zTeRQw",
+        "image_b6VQ6P",
+        "image_QLc7kY"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
