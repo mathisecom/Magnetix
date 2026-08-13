@@ -136,16 +136,15 @@
   #benefits-bar-{{ section.id }} .benefits-bar__group {
     width: 100%;
 
-    min-height: 44px;
+    min-height: 42px;
 
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
 
     gap: 30px;
 
-    padding: 8px 30px;
+    padding: 7px 30px;
 
     box-sizing: border-box;
 
@@ -159,7 +158,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    gap: 8px;
 
     white-space: nowrap;
 
@@ -173,29 +172,29 @@
     align-items: center;
     justify-content: center;
 
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 
-    flex: 0 0 18px;
+    flex: 0 0 17px;
   }
 
 
   #benefits-bar-{{ section.id }} .benefits-bar__icon svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 
     display: block;
   }
 
 
   #benefits-bar-{{ section.id }} .benefits-bar__text {
-    font-size: 12px;
+    font-size: 11px;
 
     line-height: 1.2;
 
     font-weight: 700;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
 
     text-transform: uppercase;
   }
@@ -217,9 +216,23 @@
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__text {
-      font-size: 11px;
+      font-size: 10.5px;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__icon {
+      width: 16px;
+      height: 16px;
+
+      flex: 0 0 16px;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__icon svg {
+      width: 16px;
+      height: 16px;
     }
 
   }
@@ -234,14 +247,13 @@
   @media screen and (max-width: 749px) {
 
     #benefits-bar-{{ section.id }} {
-
       border: none !important;
+
       box-shadow: none !important;
     }
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__viewport {
-
       width: 100%;
 
       overflow-x: auto;
@@ -254,19 +266,18 @@
       scroll-behavior: smooth;
 
       border: none !important;
+
       box-shadow: none !important;
     }
 
 
     #benefits-bar-{{ section.id }}
     .benefits-bar__viewport::-webkit-scrollbar {
-
       display: none;
     }
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__track {
-
       width: max-content;
 
       display: flex;
@@ -280,10 +291,9 @@
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__group {
-
       width: max-content;
 
-      min-height: 42px;
+      min-height: 40px;
 
       display: flex;
 
@@ -291,9 +301,9 @@
 
       justify-content: flex-start;
 
-      gap: 36px;
+      gap: 32px;
 
-      padding: 9px 20px;
+      padding: 8px 18px;
 
       flex-shrink: 0;
 
@@ -304,14 +314,13 @@
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__item {
-
       flex-shrink: 0;
 
       display: flex;
 
       align-items: center;
 
-      gap: 8px;
+      gap: 7px;
 
       white-space: nowrap;
 
@@ -320,32 +329,29 @@
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__text {
-
-      font-size: 11px;
+      font-size: 10px;
 
       line-height: 1.2;
 
       font-weight: 700;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
 
       text-transform: uppercase;
     }
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__icon {
+      width: 15px;
+      height: 15px;
 
-      width: 17px;
-      height: 17px;
-
-      flex: 0 0 17px;
+      flex: 0 0 15px;
     }
 
 
     #benefits-bar-{{ section.id }} .benefits-bar__icon svg {
-
-      width: 17px;
-      height: 17px;
+      width: 15px;
+      height: 15px;
     }
 
   }
