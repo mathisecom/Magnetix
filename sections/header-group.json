@@ -65,14 +65,12 @@
       "type": "annoucementbar",
       "name": "Bannière avantages",
       "settings": {
+        "text_1": "Livraison rapide",
+        "text_2": "60 jours satisfait ou remboursé",
+        "text_3": "Garantie 1 an incluse",
         "bg_color": "#f7f7f7",
         "text_color": "#1f1f1f",
-        "text_1": "Livraison rapide",
-        "icon_1": "truck",
-        "text_2": "60 jours satisfait ou remboursé",
-        "icon_2": "calendar",
-        "text_3": "Garantie 1 an incluse",
-        "icon_3": "shield"
+        "scroll_speed": 20
       }
     }
   },
