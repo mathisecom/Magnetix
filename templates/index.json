@@ -77,6 +77,90 @@
         "lazy": true
       }
     },
+    "collectionlist_atmrnx": {
+      "type": "collectionlist",
+      "blocks": {
+        "category_XVJWVQ": {
+          "type": "category",
+          "settings": {
+            "title": "Batteries externes",
+            "link": ""
+          }
+        },
+        "category_UwAVVJ": {
+          "type": "category",
+          "settings": {
+            "title": "Coques",
+            "link": ""
+          }
+        },
+        "category_PTGMtV": {
+          "type": "category",
+          "settings": {
+            "title": "Chargeurs sans fil",
+            "link": ""
+          }
+        },
+        "category_xpJpEe": {
+          "type": "category",
+          "settings": {
+            "title": "Câbles",
+            "link": ""
+          }
+        },
+        "category_NEr994": {
+          "type": "category",
+          "settings": {
+            "title": "Accessoires",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_XVJWVQ",
+        "category_UwAVVJ",
+        "category_PTGMtV",
+        "category_xpJpEe",
+        "category_NEr994"
+      ],
+      "name": "Catégories produits",
+      "settings": {
+        "title": "",
+        "title_color": "#000000",
+        "title_size": 30,
+        "mobile_title_size": 18,
+        "title_weight": "700",
+        "mobile_title_alignment": "center",
+        "title_spacing": 22,
+        "mobile_title_spacing": 26,
+        "section_background": "#FFFFFF",
+        "card_background": "#F5F6F7",
+        "text_color": "#111111",
+        "card_width": 155,
+        "card_height": 155,
+        "card_radius": 12,
+        "card_padding_top": 16,
+        "card_padding_bottom": 14,
+        "desktop_gap": 40,
+        "hover_shadow": true,
+        "image_width": 80,
+        "image_height": 85,
+        "text_size": 14,
+        "text_weight": "600",
+        "mobile_card_width": 120,
+        "mobile_card_height": 130,
+        "mobile_card_radius": 10,
+        "mobile_gap": 10,
+        "mobile_image_width": 65,
+        "mobile_image_height": 65,
+        "mobile_text_size": 12,
+        "max_width": 1300,
+        "padding_top": 35,
+        "padding_bottom": 35,
+        "mobile_padding_top": 25,
+        "mobile_padding_bottom": 25
+      }
+    },
     "slideshow_kPLEdX": {
       "type": "slideshow",
       "blocks": {
@@ -117,7 +201,7 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "background_gradient": ""
       }
     },
@@ -177,6 +261,7 @@
   },
   "order": [
     "logoscroll_GAa3Gh",
+    "collectionlist_atmrnx",
     "slideshow_kPLEdX",
     "faq"
   ]
