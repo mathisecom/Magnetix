@@ -208,6 +208,93 @@
         "mobile_padding_bottom": 15
       }
     },
+    "cardbestseller_3LYG4z": {
+      "type": "cardbestseller",
+      "blocks": {
+        "product_card_M4MPhp": {
+          "type": "product_card",
+          "settings": {
+            "title": "Batterie Magnétique",
+            "subtitle": "Puissance nomade et recharge sans fil",
+            "button_text": "Découvrir",
+            "link": ""
+          }
+        },
+        "product_card_zimAzh": {
+          "type": "product_card",
+          "settings": {
+            "title": "Chargeur MagSafe",
+            "subtitle": "Une recharge magnétique simple et rapide",
+            "button_text": "Découvrir",
+            "link": ""
+          }
+        },
+        "product_card_HRDUDg": {
+          "type": "product_card",
+          "settings": {
+            "title": "Coque MagSafe",
+            "subtitle": "Protection élégante et fixation magnétique",
+            "button_text": "Découvrir",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_M4MPhp",
+        "product_card_zimAzh",
+        "product_card_HRDUDg"
+      ],
+      "name": "Les essentiels Magnetix",
+      "settings": {
+        "title": "Essentiels Magnetix",
+        "subtitle": "Découvrez nos accessoires magnétiques conçus pour simplifier votre quotidien.",
+        "title_color": "#000000",
+        "subtitle_color": "#111111",
+        "title_size": 40,
+        "subtitle_size": 19,
+        "header_spacing": 48,
+        "section_background": "#FFFFFF",
+        "max_width": 1250,
+        "padding_top": 45,
+        "padding_bottom": 45,
+        "card_top_color": "#FFF9EF",
+        "card_bottom_color": "#EAF3FF",
+        "card_text_color": "#111111",
+        "card_height": 580,
+        "card_radius": 10,
+        "card_gap": 16,
+        "card_padding_top": 28,
+        "product_title_size": 20,
+        "product_subtitle_size": 14,
+        "image_width": 82,
+        "image_height": 88,
+        "image_padding_top": 10,
+        "image_padding_bottom": 20,
+        "button_background": "#000000",
+        "button_text_color": "#FFFFFF",
+        "button_border_color": "#000000",
+        "button_border_width": 1,
+        "button_text_size": 15,
+        "button_hover_background": "#FFFFFF",
+        "button_hover_text_color": "#000000",
+        "mobile_title_size": 28,
+        "mobile_subtitle_size": 14,
+        "mobile_header_spacing": 28,
+        "mobile_card_width": 300,
+        "mobile_card_height": 480,
+        "mobile_card_radius": 10,
+        "mobile_gap": 12,
+        "mobile_side_space": 16,
+        "mobile_card_padding_top": 24,
+        "mobile_product_title_size": 19,
+        "mobile_product_subtitle_size": 13,
+        "mobile_button_size": 13,
+        "mobile_image_width": 82,
+        "mobile_image_height": 90,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
     "slideshow_kPLEdX": {
       "type": "slideshow",
       "blocks": {
@@ -310,6 +397,7 @@
     "collectionlist_atmrnx",
     "logoscroll_GAa3Gh",
     "banner3_dnGhnB",
+    "cardbestseller_3LYG4z",
     "slideshow_kPLEdX",
     "faq"
   ]
