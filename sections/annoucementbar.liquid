@@ -1,197 +1,338 @@
-<section class="feature-announcement-bar" style="background: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
-  <div class="feature-announcement-bar__inner page-width">
-    
-    <div class="feature-announcement-bar__item">
-      <span class="feature-announcement-bar__icon">
-        {% if section.settings.icon_1 == 'truck' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M3 6h11v8h-1.5a2.5 2.5 0 0 0-5 0H6a2.5 2.5 0 0 0-5 0H1V8a2 2 0 0 1 2-2Zm11 3h3.5l2.5 2.5V14H19a2.5 2.5 0 0 0-5 0h-1V9Zm-8 7.5A1.5 1.5 0 1 1 6 13.5a1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_1 == 'calendar' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_1 == 'shield' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2 4 5v6c0 5.25 3.4 10.15 8 11 4.6-.85 8-5.75 8-11V5l-8-3Zm0 2.1 6 2.25V11c0 4.19-2.6 8.1-6 8.95C8.6 19.1 6 15.19 6 11V6.35l6-2.25Z" fill="currentColor"/>
-          </svg>
-        {% endif %}
+<section
+  id="benefits-bar-{{ section.id }}"
+  class="benefits-bar"
+  style="
+    --bar-bg: {{ section.settings.bg_color }};
+    --bar-text: {{ section.settings.text_color }};
+    --scroll-speed: {{ section.settings.scroll_speed }}s;
+  "
+>
+  {% capture benefits_items %}
+
+    <div class="benefits-bar__item">
+      <span class="benefits-bar__icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h11v8h-1.5a2.5 2.5 0 0 0-5 0H6a2.5 2.5 0 0 0-5 0H1V8a2 2 0 0 1 2-2Zm11 3h3.5l2.5 2.5V14H19a2.5 2.5 0 0 0-5 0h-1V9Zm-8 7.5A1.5 1.5 0 1 1 6 13.5a1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="currentColor"/>
+        </svg>
       </span>
-      <span class="feature-announcement-bar__text">{{ section.settings.text_1 }}</span>
+
+      <span class="benefits-bar__text">
+        {{ section.settings.text_1 }}
+      </span>
     </div>
 
-    <div class="feature-announcement-bar__item">
-      <span class="feature-announcement-bar__icon">
-        {% if section.settings.icon_2 == 'truck' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M3 6h11v8h-1.5a2.5 2.5 0 0 0-5 0H6a2.5 2.5 0 0 0-5 0H1V8a2 2 0 0 1 2-2Zm11 3h3.5l2.5 2.5V14H19a2.5 2.5 0 0 0-5 0h-1V9Zm-8 7.5A1.5 1.5 0 1 1 6 13.5a1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_2 == 'calendar' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_2 == 'shield' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2 4 5v6c0 5.25 3.4 10.15 8 11 4.6-.85 8-5.75 8-11V5l-8-3Zm0 2.1 6 2.25V11c0 4.19-2.6 8.1-6 8.95C8.6 19.1 6 15.19 6 11V6.35l6-2.25Z" fill="currentColor"/>
-          </svg>
-        {% endif %}
+
+    <div class="benefits-bar__item">
+      <span class="benefits-bar__icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z" fill="currentColor"/>
+        </svg>
       </span>
-      <span class="feature-announcement-bar__text">{{ section.settings.text_2 }}</span>
+
+      <span class="benefits-bar__text">
+        {{ section.settings.text_2 }}
+      </span>
     </div>
 
-    <div class="feature-announcement-bar__item">
-      <span class="feature-announcement-bar__icon">
-        {% if section.settings.icon_3 == 'truck' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M3 6h11v8h-1.5a2.5 2.5 0 0 0-5 0H6a2.5 2.5 0 0 0-5 0H1V8a2 2 0 0 1 2-2Zm11 3h3.5l2.5 2.5V14H19a2.5 2.5 0 0 0-5 0h-1V9Zm-8 7.5A1.5 1.5 0 1 1 6 13.5a1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_3 == 'calendar' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z" fill="currentColor"/>
-          </svg>
-        {% elsif section.settings.icon_3 == 'shield' %}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2 4 5v6c0 5.25 3.4 10.15 8 11 4.6-.85 8-5.75 8-11V5l-8-3Zm0 2.1 6 2.25V11c0 4.19-2.6 8.1-6 8.95C8.6 19.1 6 15.19 6 11V6.35l6-2.25Z" fill="currentColor"/>
-          </svg>
-        {% endif %}
+
+    <div class="benefits-bar__item">
+      <span class="benefits-bar__icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2 4 5v6c0 5.25 3.4 10.15 8 11 4.6-.85 8-5.75 8-11V5l-8-3Zm0 2.1 6 2.25V11c0 4.19-2.6 8.1-6 8.95C8.6 19.1 6 15.19 6 11V6.35l6-2.25Z" fill="currentColor"/>
+        </svg>
       </span>
-      <span class="feature-announcement-bar__text">{{ section.settings.text_3 }}</span>
+
+      <span class="benefits-bar__text">
+        {{ section.settings.text_3 }}
+      </span>
+    </div>
+
+  {% endcapture %}
+
+
+  <div class="benefits-bar__viewport">
+
+    <div class="benefits-bar__track">
+
+      <div class="benefits-bar__group">
+        {{ benefits_items }}
+      </div>
+
+      <div
+        class="benefits-bar__group benefits-bar__group--duplicate"
+        aria-hidden="true"
+      >
+        {{ benefits_items }}
+      </div>
+
     </div>
 
   </div>
 </section>
 
+
 <style>
-  .feature-announcement-bar {
+
+  #benefits-bar-{{ section.id }} {
     width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    background: var(--bar-bg);
+    color: var(--bar-text);
+    overflow: hidden;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  .feature-announcement-bar__inner {
+
+  /* =========================
+     DESKTOP
+  ========================== */
+
+  #benefits-bar-{{ section.id }} .benefits-bar__viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  #benefits-bar-{{ section.id }} .benefits-bar__track {
+    width: 100%;
+  }
+
+
+  #benefits-bar-{{ section.id }} .benefits-bar__group {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 8px 30px;
+    box-sizing: border-box;
+  }
+
+
+  #benefits-bar-{{ section.id }} .benefits-bar__group--duplicate {
+    display: none;
+  }
+
+
+  #benefits-bar-{{ section.id }} .benefits-bar__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 48px;
-    min-height: 48px;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-  }
 
-  .feature-announcement-bar__item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    line-height: 1.2;
+    gap: 9px;
+
     white-space: nowrap;
   }
 
-  .feature-announcement-bar__icon {
-    display: inline-flex;
+
+  #benefits-bar-{{ section.id }} .benefits-bar__icon {
+    display: flex;
     align-items: center;
     justify-content: center;
+
     width: 18px;
     height: 18px;
+
     flex: 0 0 18px;
   }
 
-  .feature-announcement-bar__icon svg {
+
+  #benefits-bar-{{ section.id }} .benefits-bar__icon svg {
     width: 18px;
     height: 18px;
     display: block;
   }
 
+
+  #benefits-bar-{{ section.id }} .benefits-bar__text {
+    font-size: 12px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+  }
+
+
+
+  /* =========================
+     MOBILE - BARRE DÉFILANTE
+  ========================== */
+
   @media screen and (max-width: 749px) {
-    .feature-announcement-bar__inner {
-      gap: 16px;
-      padding: 10px 14px;
-      min-height: auto;
-      flex-direction: column;
-      align-items: flex-start;
+
+    #benefits-bar-{{ section.id }} .benefits-bar__viewport {
+      overflow: hidden;
+      width: 100%;
     }
 
-    .feature-announcement-bar__item {
-      font-size: 12px;
-      white-space: normal;
+
+    #benefits-bar-{{ section.id }} .benefits-bar__track {
+      display: flex;
+
+      width: max-content;
+
+      animation:
+        benefits-scroll-{{ section.id }}
+        var(--scroll-speed)
+        linear
+        infinite;
+
+      will-change: transform;
     }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__group {
+      width: max-content;
+
+      min-height: 42px;
+
+      display: flex;
+
+      justify-content: flex-start;
+
+      gap: 42px;
+
+      padding: 8px 21px;
+
+      flex-shrink: 0;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__group--duplicate {
+      display: flex;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__item {
+      flex-shrink: 0;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__text {
+      font-size: 11px;
+      letter-spacing: 0.07em;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__icon {
+      width: 17px;
+      height: 17px;
+      flex-basis: 17px;
+    }
+
+
+    #benefits-bar-{{ section.id }} .benefits-bar__icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+
+    @keyframes benefits-scroll-{{ section.id }} {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
+    }
+
   }
+
+
+  /* Accessibilité */
+  @media (prefers-reduced-motion: reduce) {
+
+    #benefits-bar-{{ section.id }} .benefits-bar__track {
+      animation-play-state: paused;
+    }
+
+  }
+
 </style>
+
 
 {% schema %}
 {
-  "name": "Bannière avantages",
+  "name": "Barre avantages",
   "settings": [
+
+    {
+      "type": "header",
+      "content": "Avantages"
+    },
+
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Avantage 1",
+      "default": "Livraison rapide"
+    },
+
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Avantage 2",
+      "default": "60 jours satisfait ou remboursé"
+    },
+
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Avantage 3",
+      "default": "Garantie 1 an incluse"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Style"
+    },
+
     {
       "type": "color",
       "id": "bg_color",
       "label": "Couleur de fond",
-      "default": "#f7f7f7"
+      "default": "#F5F5F5"
     },
+
     {
       "type": "color",
       "id": "text_color",
       "label": "Couleur du texte",
-      "default": "#1f1f1f"
+      "default": "#1A1A1A"
     },
+
+
     {
-      "type": "text",
-      "id": "text_1",
-      "label": "Texte 1",
-      "default": "Livraison rapide"
+      "type": "header",
+      "content": "Défilement mobile"
     },
+
     {
-      "type": "select",
-      "id": "icon_1",
-      "label": "Icône 1",
-      "default": "truck",
-      "options": [
-        { "value": "truck", "label": "Camion" },
-        { "value": "calendar", "label": "Calendrier" },
-        { "value": "shield", "label": "Bouclier" }
-      ]
-    },
-    {
-      "type": "text",
-      "id": "text_2",
-      "label": "Texte 2",
-      "default": "60 jours satisfait ou remboursé"
-    },
-    {
-      "type": "select",
-      "id": "icon_2",
-      "label": "Icône 2",
-      "default": "calendar",
-      "options": [
-        { "value": "truck", "label": "Camion" },
-        { "value": "calendar", "label": "Calendrier" },
-        { "value": "shield", "label": "Bouclier" }
-      ]
-    },
-    {
-      "type": "text",
-      "id": "text_3",
-      "label": "Texte 3",
-      "default": "Garantie 1 an incluse"
-    },
-    {
-      "type": "select",
-      "id": "icon_3",
-      "label": "Icône 3",
-      "default": "shield",
-      "options": [
-        { "value": "truck", "label": "Camion" },
-        { "value": "calendar", "label": "Calendrier" },
-        { "value": "shield", "label": "Bouclier" }
-      ]
+      "type": "range",
+      "id": "scroll_speed",
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "unit": "s",
+      "label": "Vitesse du défilement",
+      "default": 18
     }
+
   ],
+
   "presets": [
     {
-      "name": "Bannière avantages"
+      "name": "Barre avantages défilante"
     }
   ]
 }
