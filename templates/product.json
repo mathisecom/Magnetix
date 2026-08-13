@@ -169,50 +169,6 @@
         "input_text_color": ""
       }
     },
-    "slideshow_whn7TT": {
-      "type": "slideshow",
-      "blocks": {
-        "image_UDkhez": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/e2b3b913-c7cb-4209-bef8-38c68e791ad7.png",
-            "mobile_image": "shopify://shop_images/68204a3a-e53b-47cc-82e6-0f7d822aa603.png",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "",
-            "title": "",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_UDkhez"
-      ],
-      "disabled": true,
-      "name": "Slideshow",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "show_initial_transition": false,
-        "image_size": "auto",
-        "controls_type": "dots",
-        "transition_type": "fade_with_text",
-        "autoplay": false,
-        "cycle_speed": 6,
-        "background": "#F2F2F2",
-        "background_gradient": ""
-      }
-    },
     "rich_text_PfMKDy": {
       "type": "rich-text",
       "blocks": {
@@ -292,9 +248,9 @@
         "card_width_desktop": 130,
         "card_width_mobile": 100,
         "heading_color": "#121212",
-        "layout_bg_color": "#FFFFFF",
+        "layout_bg_color": "#ffffff",
         "layout_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "border_color": "#121212",
         "margin_top": 0,
         "margin_bottom": 0,
@@ -391,7 +347,7 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "testimonial_card_background": "#F5F6F7",
+        "testimonial_card_background": "#f5f6f7",
         "testimonial_card_text_color": ""
       }
     },
@@ -446,6 +402,50 @@
         "text_gradient": ""
       }
     },
+    "slideshow_whn7TT": {
+      "type": "slideshow",
+      "blocks": {
+        "image_UDkhez": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/e2b3b913-c7cb-4209-bef8-38c68e791ad7.png",
+            "mobile_image": "shopify://shop_images/68204a3a-e53b-47cc-82e6-0f7d822aa603.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_UDkhez"
+      ],
+      "disabled": true,
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
     "media_with_text_6r8JhQ": {
       "type": "media-with-text",
       "blocks": {
@@ -462,7 +462,7 @@
             "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "link_text": "",
             "link_url": "",
-            "background": "#F5F6F7",
+            "background": "#f5f6f7",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
@@ -484,12 +484,12 @@
   },
   "order": [
     "main",
-    "slideshow_whn7TT",
     "rich_text_PfMKDy",
     "logoscroll_QMWeNd",
     "testimonials_zxqFQr",
     "media_with_text_xpLGND",
     "scrolling_text_FcCwWR",
+    "slideshow_whn7TT",
     "media_with_text_6r8JhQ"
   ]
 }
