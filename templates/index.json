@@ -463,7 +463,7 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "testimonial_card_background": "#F5F6F7",
+        "testimonial_card_background": "#f5f6f7",
         "testimonial_card_text_color": ""
       }
     },
@@ -546,7 +546,8 @@
         "subheading": "",
         "title": "Questions Fréquentes",
         "content": "",
-        "team_avatar_width": 160,
+        "team_avatar": "shopify://shop_images/team-fff.webp",
+        "team_avatar_width": 100,
         "support_hours": "",
         "answer_time": "",
         "button_text": "",
@@ -559,7 +560,7 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "#F5F6F7",
+        "accordion_background": "#f5f6f7",
         "accordion_text_color": ""
       }
     }
