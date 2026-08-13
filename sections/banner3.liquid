@@ -1,0 +1,1208 @@
+<section
+  id="magnetix-showcase-{{ section.id }}"
+  class="magnetix-showcase"
+>
+  <div class="magnetix-showcase__container">
+
+    <!-- ==========================================
+         GRANDE BANNIÈRE
+    =========================================== -->
+
+    <div class="magnetix-showcase__hero">
+
+      <picture>
+
+        {% if section.settings.hero_mobile_image != blank %}
+          <source
+            media="(max-width: 749px)"
+            srcset="{{ section.settings.hero_mobile_image | image_url: width: 1000 }}"
+          >
+        {% endif %}
+
+        {% if section.settings.hero_image != blank %}
+          {{
+            section.settings.hero_image
+            | image_url: width: 2200
+            | image_tag:
+              loading: 'lazy',
+              widths: '600, 900, 1200, 1600, 2000, 2200',
+              class: 'magnetix-showcase__image',
+              alt: section.settings.hero_title
+          }}
+        {% else %}
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'magnetix-showcase__placeholder' }}
+        {% endif %}
+
+      </picture>
+
+
+      <div
+        class="magnetix-showcase__overlay"
+        style="opacity: {{ section.settings.hero_overlay | divided_by: 100.0 }};"
+      ></div>
+
+
+      <div
+        class="
+          magnetix-showcase__content
+          magnetix-showcase__content--hero
+          magnetix-showcase__content--{{ section.settings.hero_content_position }}
+        "
+      >
+
+        {% if section.settings.hero_title != blank %}
+          <h2 class="magnetix-showcase__hero-title">
+            {{ section.settings.hero_title }}
+          </h2>
+        {% endif %}
+
+
+        {% if section.settings.hero_subtitle != blank %}
+          <div class="magnetix-showcase__hero-subtitle">
+            {{ section.settings.hero_subtitle }}
+          </div>
+        {% endif %}
+
+
+        {% if section.settings.hero_button_text != blank %}
+          <a
+            class="magnetix-showcase__button magnetix-showcase__button--light"
+            {% if section.settings.hero_link != blank %}
+              href="{{ section.settings.hero_link }}"
+            {% else %}
+              role="link"
+              aria-disabled="true"
+            {% endif %}
+          >
+            {{ section.settings.hero_button_text }}
+          </a>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         DEUX CARTES
+    =========================================== -->
+
+    <div class="magnetix-showcase__grid">
+
+
+      <!-- CARTE 1 : CHARGEURS -->
+      <div class="magnetix-showcase__card">
+
+        <picture>
+
+          {% if section.settings.card_1_mobile_image != blank %}
+            <source
+              media="(max-width: 749px)"
+              srcset="{{ section.settings.card_1_mobile_image | image_url: width: 900 }}"
+            >
+          {% endif %}
+
+          {% if section.settings.card_1_image != blank %}
+            {{
+              section.settings.card_1_image
+              | image_url: width: 1400
+              | image_tag:
+                loading: 'lazy',
+                widths: '500, 700, 900, 1100, 1400',
+                class: 'magnetix-showcase__image',
+                alt: section.settings.card_1_title
+            }}
+          {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'magnetix-showcase__placeholder' }}
+          {% endif %}
+
+        </picture>
+
+
+        <div
+          class="magnetix-showcase__card-overlay"
+          style="opacity: {{ section.settings.card_1_overlay | divided_by: 100.0 }};"
+        ></div>
+
+
+        <div
+          class="
+            magnetix-showcase__content
+            magnetix-showcase__content--card
+            magnetix-showcase__content--{{ section.settings.card_1_content_position }}
+          "
+        >
+
+          {% if section.settings.card_1_title != blank %}
+            <h3
+              class="magnetix-showcase__card-title"
+              style="color: {{ section.settings.card_1_text_color }};"
+            >
+              {{ section.settings.card_1_title }}
+            </h3>
+          {% endif %}
+
+
+          {% if section.settings.card_1_subtitle != blank %}
+            <div
+              class="magnetix-showcase__card-subtitle"
+              style="color: {{ section.settings.card_1_text_color }};"
+            >
+              {{ section.settings.card_1_subtitle }}
+            </div>
+          {% endif %}
+
+
+          {% if section.settings.card_1_button_text != blank %}
+            <a
+              class="magnetix-showcase__button"
+              style="
+                color: {{ section.settings.card_1_text_color }};
+                border-color: {{ section.settings.card_1_text_color }};
+              "
+              {% if section.settings.card_1_link != blank %}
+                href="{{ section.settings.card_1_link }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.card_1_button_text }}
+            </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+
+
+      <!-- CARTE 2 : COQUES -->
+      <div class="magnetix-showcase__card">
+
+        <picture>
+
+          {% if section.settings.card_2_mobile_image != blank %}
+            <source
+              media="(max-width: 749px)"
+              srcset="{{ section.settings.card_2_mobile_image | image_url: width: 900 }}"
+            >
+          {% endif %}
+
+          {% if section.settings.card_2_image != blank %}
+            {{
+              section.settings.card_2_image
+              | image_url: width: 1400
+              | image_tag:
+                loading: 'lazy',
+                widths: '500, 700, 900, 1100, 1400',
+                class: 'magnetix-showcase__image',
+                alt: section.settings.card_2_title
+            }}
+          {% else %}
+            {{ 'product-2' | placeholder_svg_tag: 'magnetix-showcase__placeholder' }}
+          {% endif %}
+
+        </picture>
+
+
+        <div
+          class="magnetix-showcase__card-overlay"
+          style="opacity: {{ section.settings.card_2_overlay | divided_by: 100.0 }};"
+        ></div>
+
+
+        <div
+          class="
+            magnetix-showcase__content
+            magnetix-showcase__content--card
+            magnetix-showcase__content--{{ section.settings.card_2_content_position }}
+          "
+        >
+
+          {% if section.settings.card_2_title != blank %}
+            <h3
+              class="magnetix-showcase__card-title"
+              style="color: {{ section.settings.card_2_text_color }};"
+            >
+              {{ section.settings.card_2_title }}
+            </h3>
+          {% endif %}
+
+
+          {% if section.settings.card_2_subtitle != blank %}
+            <div
+              class="magnetix-showcase__card-subtitle"
+              style="color: {{ section.settings.card_2_text_color }};"
+            >
+              {{ section.settings.card_2_subtitle }}
+            </div>
+          {% endif %}
+
+
+          {% if section.settings.card_2_button_text != blank %}
+            <a
+              class="magnetix-showcase__button"
+              style="
+                color: {{ section.settings.card_2_text_color }};
+                border-color: {{ section.settings.card_2_text_color }};
+              "
+              {% if section.settings.card_2_link != blank %}
+                href="{{ section.settings.card_2_link }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.card_2_button_text }}
+            </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =====================================
+     SECTION
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} {
+    width: 100%;
+    background: {{ section.settings.background_color }};
+
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__container {
+    width: calc(100% - 40px);
+
+    max-width: {{ section.settings.max_width }}px;
+
+    margin: 0 auto;
+  }
+
+
+
+  /* =====================================
+     HERO + CARTES
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero,
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero {
+    width: 100%;
+
+    height: {{ section.settings.hero_height }}px;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: {{ section.settings.gap }}px;
+
+    margin-top: {{ section.settings.gap }}px;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card {
+    height: {{ section.settings.card_height }}px;
+  }
+
+
+
+  /* =====================================
+     IMAGES
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} picture {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.55s ease;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__placeholder {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #eeeeee;
+  }
+
+
+
+  /* =====================================
+     ZOOM AU SURVOL
+  ===================================== */
+
+  @media screen and (min-width: 990px) {
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero:hover .magnetix-showcase__image,
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card:hover .magnetix-showcase__image {
+      transform: scale(1.025);
+    }
+
+  }
+
+
+
+  /* =====================================
+     OVERLAYS
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__overlay,
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__overlay {
+    background: #000000;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-overlay {
+    background: #000000;
+  }
+
+
+
+  /* =====================================
+     CONTENU
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__content {
+    position: absolute;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: calc(100% - 60px);
+
+    max-width: 900px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+
+
+  /* Haut */
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__content--top {
+    top: 32px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+
+  /* Centre */
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__content--center {
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+
+  /* Bas */
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__content--bottom {
+    bottom: 32px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+
+
+  /* =====================================
+     TITRE HERO
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero-title {
+    margin: 0;
+
+    color: {{ section.settings.hero_text_color }};
+
+    font-size: {{ section.settings.hero_title_size }}px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero-subtitle {
+    margin-top: 10px;
+
+    color: {{ section.settings.hero_text_color }};
+
+    font-size: {{ section.settings.hero_subtitle_size }}px;
+
+    line-height: 1.4;
+  }
+
+
+
+  /* =====================================
+     TITRES CARTES
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-title {
+    margin: 0;
+
+    font-size: {{ section.settings.card_title_size }}px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-subtitle {
+    margin-top: 8px;
+
+    font-size: {{ section.settings.card_subtitle_size }}px;
+
+    line-height: 1.4;
+  }
+
+
+
+  /* =====================================
+     BOUTONS
+  ===================================== */
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    margin-top: 18px;
+
+    padding: 8px 26px;
+
+    border: 1px solid currentColor;
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__button--light {
+    color: {{ section.settings.hero_text_color }};
+
+    border-color: {{ section.settings.hero_text_color }};
+  }
+
+
+  #magnetix-showcase-{{ section.id }} .magnetix-showcase__button:hover {
+    transform: translateY(-1px);
+
+    background: rgba(255,255,255,0.16);
+  }
+
+
+
+  /* =====================================
+     TABLETTE
+  ===================================== */
+
+  @media screen and (max-width: 989px) {
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__container {
+      width: calc(100% - 30px);
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero {
+      height: 430px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card {
+      height: 410px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero-title {
+      font-size: 32px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-title {
+      font-size: 25px;
+    }
+
+  }
+
+
+
+  /* =====================================
+     MOBILE
+  ===================================== */
+
+  @media screen and (max-width: 749px) {
+
+    #magnetix-showcase-{{ section.id }} {
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__container {
+      width: calc(100% - 24px);
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__grid {
+      grid-template-columns: 1fr;
+
+      gap: {{ section.settings.mobile_gap }}px;
+
+      margin-top: {{ section.settings.mobile_gap }}px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero {
+      height: {{ section.settings.mobile_hero_height }}px;
+
+      border-radius: {{ section.settings.mobile_radius }}px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card {
+      height: {{ section.settings.mobile_card_height }}px;
+
+      border-radius: {{ section.settings.mobile_radius }}px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__content {
+      width: calc(100% - 32px);
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__content--top {
+      top: 24px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__content--bottom {
+      bottom: 24px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero-title {
+      font-size: {{ section.settings.mobile_hero_title_size }}px;
+
+      line-height: 1.1;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__hero-subtitle {
+      margin-top: 7px;
+
+      font-size: 14px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-title {
+      font-size: {{ section.settings.mobile_card_title_size }}px;
+
+      line-height: 1.12;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__card-subtitle {
+      margin-top: 6px;
+
+      font-size: 13px;
+    }
+
+
+    #magnetix-showcase-{{ section.id }} .magnetix-showcase__button {
+      min-height: 39px;
+
+      margin-top: 14px;
+
+      padding: 7px 21px;
+
+      font-size: 13px;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Vitrine Magnetix",
+
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#F7F7F7"
+    },
+
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 1000,
+      "max": 1800,
+      "step": 50,
+      "unit": "px",
+      "default": 1400
+    },
+
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Arrondi sur ordinateur",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Espace entre les blocs",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+
+
+    {
+      "type": "header",
+      "content": "Bannière — Batterie magnétique"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Image ordinateur"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "hero_mobile_image",
+      "label": "Image mobile"
+    },
+
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Titre",
+      "default": "Batteries Magnétiques Sans Fil Magnetix"
+    },
+
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Sous-titre",
+      "default": "La puissance qui vous suit partout"
+    },
+
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Texte du bouton",
+      "default": "Découvrir"
+    },
+
+    {
+      "type": "url",
+      "id": "hero_link",
+      "label": "Lien du bouton"
+    },
+
+    {
+      "type": "color",
+      "id": "hero_text_color",
+      "label": "Couleur du texte",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "range",
+      "id": "hero_overlay",
+      "label": "Assombrissement de l’image",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 20
+    },
+
+    {
+      "type": "select",
+      "id": "hero_content_position",
+      "label": "Position du contenu",
+      "default": "top",
+      "options": [
+        {
+          "value": "top",
+          "label": "Haut"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "bottom",
+          "label": "Bas"
+        }
+      ]
+    },
+
+    {
+      "type": "range",
+      "id": "hero_height",
+      "label": "Hauteur sur ordinateur",
+      "min": 350,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "default": 440
+    },
+
+    {
+      "type": "range",
+      "id": "hero_title_size",
+      "label": "Taille du titre",
+      "min": 24,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+
+    {
+      "type": "range",
+      "id": "hero_subtitle_size",
+      "label": "Taille du sous-titre",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+
+
+    {
+      "type": "header",
+      "content": "Carte — Chargeurs MagSafe"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Image ordinateur"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "card_1_mobile_image",
+      "label": "Image mobile"
+    },
+
+    {
+      "type": "text",
+      "id": "card_1_title",
+      "label": "Titre",
+      "default": "Chargeurs Magnétiques"
+    },
+
+    {
+      "type": "text",
+      "id": "card_1_subtitle",
+      "label": "Sous-titre",
+      "default": "Une recharge simple, rapide et sans câble"
+    },
+
+    {
+      "type": "text",
+      "id": "card_1_button_text",
+      "label": "Texte du bouton",
+      "default": "Découvrir"
+    },
+
+    {
+      "type": "url",
+      "id": "card_1_link",
+      "label": "Lien"
+    },
+
+    {
+      "type": "color",
+      "id": "card_1_text_color",
+      "label": "Couleur du texte",
+      "default": "#000000"
+    },
+
+    {
+      "type": "range",
+      "id": "card_1_overlay",
+      "label": "Assombrissement de l'image",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+
+    {
+      "type": "select",
+      "id": "card_1_content_position",
+      "label": "Position du contenu",
+      "default": "top",
+      "options": [
+        {
+          "value": "top",
+          "label": "Haut"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "bottom",
+          "label": "Bas"
+        }
+      ]
+    },
+
+
+    {
+      "type": "header",
+      "content": "Carte — Coques MagSafe"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Image ordinateur"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "card_2_mobile_image",
+      "label": "Image mobile"
+    },
+
+    {
+      "type": "text",
+      "id": "card_2_title",
+      "label": "Titre",
+      "default": "Coques Magnétiques"
+    },
+
+    {
+      "type": "text",
+      "id": "card_2_subtitle",
+      "label": "Sous-titre",
+      "default": "Protection élégante et connexion magnétique"
+    },
+
+    {
+      "type": "text",
+      "id": "card_2_button_text",
+      "label": "Texte du bouton",
+      "default": "Découvrir"
+    },
+
+    {
+      "type": "url",
+      "id": "card_2_link",
+      "label": "Lien"
+    },
+
+    {
+      "type": "color",
+      "id": "card_2_text_color",
+      "label": "Couleur du texte",
+      "default": "#000000"
+    },
+
+    {
+      "type": "range",
+      "id": "card_2_overlay",
+      "label": "Assombrissement de l'image",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+
+    {
+      "type": "select",
+      "id": "card_2_content_position",
+      "label": "Position du contenu",
+      "default": "top",
+      "options": [
+        {
+          "value": "top",
+          "label": "Haut"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "bottom",
+          "label": "Bas"
+        }
+      ]
+    },
+
+
+    {
+      "type": "header",
+      "content": "Cartes — dimensions"
+    },
+
+    {
+      "type": "range",
+      "id": "card_height",
+      "label": "Hauteur des cartes sur ordinateur",
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 400
+    },
+
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "Taille des titres",
+      "min": 20,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 29
+    },
+
+    {
+      "type": "range",
+      "id": "card_subtitle_size",
+      "label": "Taille des sous-titres",
+      "min": 11,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+
+
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_radius",
+      "label": "Arrondi mobile",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace entre les blocs",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_hero_height",
+      "label": "Hauteur de la grande bannière",
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "default": 440
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_height",
+      "label": "Hauteur des petites bannières",
+      "min": 280,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 380
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_hero_title_size",
+      "label": "Taille titre principal",
+      "min": 20,
+      "max": 42,
+      "step": 1,
+      "unit": "px",
+      "default": 27
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_title_size",
+      "label": "Taille titres des cartes",
+      "min": 18,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "Vitrine Magnetix"
+    }
+  ]
+}
+{% endschema %}
