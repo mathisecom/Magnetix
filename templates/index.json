@@ -217,7 +217,7 @@
             "title": "Batterie Magnétique",
             "subtitle": "Puissance nomade et recharge sans fil",
             "button_text": "Découvrir",
-            "link": ""
+            "link": "shopify://products/batterie-externe-magnetique"
           }
         },
         "product_card_zimAzh": {
@@ -226,7 +226,7 @@
             "title": "Chargeur MagSafe",
             "subtitle": "Une recharge magnétique simple et rapide",
             "button_text": "Découvrir",
-            "link": ""
+            "link": "shopify://products/chargeur-sans-fil"
           }
         },
         "product_card_HRDUDg": {
@@ -235,7 +235,7 @@
             "title": "Coque MagSafe",
             "subtitle": "Protection élégante et fixation magnétique",
             "button_text": "Découvrir",
-            "link": ""
+            "link": "shopify://products/coque-magnetique-iphone"
           }
         }
       },
