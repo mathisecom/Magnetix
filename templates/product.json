@@ -110,7 +110,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
+            "title": "Informations sur la livraisons",
             "content": "<p>Share some content to your customers about your products.</p>",
             "page": ""
           }
@@ -120,17 +120,7 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_text_93qWPX": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Title",
+            "title": "Retour & Garantie",
             "content": "<p>Share some content to your customers about your products.</p>",
             "page": ""
           }
@@ -152,8 +142,7 @@
         "liquid_PNDHn8",
         "liquid_NzPB4t",
         "collapsible_text_E9frVm",
-        "collapsible_text_zPqDa3",
-        "collapsible_text_93qWPX"
+        "collapsible_text_zPqDa3"
       ],
       "settings": {
         "full_width": true,
