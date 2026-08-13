@@ -158,6 +158,49 @@
         "input_text_color": ""
       }
     },
+    "slideshow_whn7TT": {
+      "type": "slideshow",
+      "blocks": {
+        "image_UDkhez": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/e2b3b913-c7cb-4209-bef8-38c68e791ad7.png",
+            "mobile_image": "shopify://shop_images/e2b3b913-c7cb-4209-bef8-38c68e791ad7.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_UDkhez"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#F2F2F2",
+        "background_gradient": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -183,6 +226,7 @@
   },
   "order": [
     "main",
+    "slideshow_whn7TT",
     "related-products"
   ]
 }
