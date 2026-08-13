@@ -106,6 +106,7 @@
       "block_order": [
         "image_kkH8aj"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "full_width": false,
