@@ -68,9 +68,8 @@
         "text_1": "Livraison rapide",
         "text_2": "60 jours satisfait ou remboursé",
         "text_3": "Garantie 1 an incluse",
-        "bg_color": "#f7f7f7",
-        "text_color": "#1f1f1f",
-        "scroll_speed": 20
+        "bg_color": "#F5F6F7",
+        "text_color": "#000000"
       }
     }
   },
