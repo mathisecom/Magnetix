@@ -161,6 +161,74 @@
         "lazy": true
       }
     },
+    "logoscroll_74tckC": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_MAmFrT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Digital_Trends_1.webp",
+            "url": ""
+          }
+        },
+        "image_6EQV6e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Forbes.avif",
+            "url": ""
+          }
+        },
+        "image_zTeRQw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HowToGeek_1.avif",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_MAmFrT",
+        "image_6EQV6e",
+        "image_zTeRQw"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 30,
+        "scrolling_velocity_mobile": 20,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 70,
+        "scrolling_gap_mobile": 30,
+        "card_width_desktop": 130,
+        "card_width_mobile": 100,
+        "heading_color": "#121212",
+        "layout_bg_color": "#ffffff",
+        "layout_border_color": "#121212",
+        "background_color": "#ffffff",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "banner3_dnGhnB": {
       "type": "banner3",
       "name": "Vitrine Magnetix",
@@ -253,12 +321,12 @@
         "title_size": 40,
         "subtitle_size": 19,
         "header_spacing": 48,
-        "section_background": "#FFFFFF",
+        "section_background": "#ffffff",
         "max_width": 1250,
         "padding_top": 45,
         "padding_bottom": 45,
-        "card_top_color": "#FFF9EF",
-        "card_bottom_color": "#EAF3FF",
+        "card_top_color": "#fff9ef",
+        "card_bottom_color": "#eaf3ff",
         "card_text_color": "#111111",
         "card_height": 580,
         "card_radius": 10,
@@ -271,11 +339,11 @@
         "image_padding_top": 10,
         "image_padding_bottom": 20,
         "button_background": "#000000",
-        "button_text_color": "#FFFFFF",
+        "button_text_color": "#ffffff",
         "button_border_color": "#000000",
         "button_border_width": 1,
         "button_text_size": 15,
-        "button_hover_background": "#FFFFFF",
+        "button_hover_background": "#ffffff",
         "button_hover_text_color": "#000000",
         "mobile_title_size": 28,
         "mobile_subtitle_size": 14,
@@ -398,6 +466,7 @@
     "logoscroll_GAa3Gh",
     "banner3_dnGhnB",
     "cardbestseller_3LYG4z",
+    "logoscroll_74tckC",
     "slideshow_kPLEdX",
     "faq"
   ]
