@@ -59,7 +59,6 @@
         "customer-support",
         "discount"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
