@@ -499,7 +499,7 @@
       "disabled": true,
       "name": "Slideshow",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "allow_transparent_header": true,
         "show_initial_transition": false,
         "image_size": "auto",
