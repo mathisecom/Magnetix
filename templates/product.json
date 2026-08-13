@@ -123,7 +123,7 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Informations sur la livraisons",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "content": "<p>Nous expédions votre commande en <strong>24h</strong> et vous la recevez <strong>sous 4 à 6 jours ouvrés.</strong> </p><p>La <strong>livraison standard est 100% gratuite</strong>, sans minimum d’achat. Vous recevrez un numéro de suivi dès l’expédition. </p>",
             "page": ""
           }
         },
@@ -133,7 +133,7 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Retour & Garantie",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "content": "<p>Votre satisfaction est notre priorité.<br/>Si un produit ne vous convient pas, vous avez<strong>30 jours pour changer d’avis.</strong>Retour simple et rapide, sans frais cachés.</p>",
             "page": ""
           }
         }
