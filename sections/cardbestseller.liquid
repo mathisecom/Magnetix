@@ -1,0 +1,1304 @@
+<section
+  id="magnetix-essentials-{{ section.id }}"
+  class="magnetix-essentials"
+>
+  <div class="magnetix-essentials__container">
+
+    <!-- TITRE -->
+    <div class="magnetix-essentials__header">
+
+      {% if section.settings.title != blank %}
+        <h2 class="magnetix-essentials__title">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.subtitle != blank %}
+        <div class="magnetix-essentials__subtitle">
+          {{ section.settings.subtitle }}
+        </div>
+      {% endif %}
+
+    </div>
+
+
+    <!-- CARROUSEL / CARTES -->
+    <div class="magnetix-essentials__scroll">
+
+      <div class="magnetix-essentials__grid">
+
+        {% for block in section.blocks %}
+
+          <article
+            class="magnetix-product-card"
+            {{ block.shopify_attributes }}
+          >
+
+            <!-- PARTIE HAUTE -->
+            <div class="magnetix-product-card__top">
+
+              {% if block.settings.title != blank %}
+                <h3 class="magnetix-product-card__title">
+                  {{ block.settings.title }}
+                </h3>
+              {% endif %}
+
+
+              {% if block.settings.subtitle != blank %}
+                <div class="magnetix-product-card__subtitle">
+                  {{ block.settings.subtitle }}
+                </div>
+              {% endif %}
+
+
+              {% if block.settings.button_text != blank %}
+
+                <a
+                  class="magnetix-product-card__button"
+                  {% if block.settings.link != blank %}
+                    href="{{ block.settings.link }}"
+                  {% else %}
+                    role="link"
+                    aria-disabled="true"
+                  {% endif %}
+                >
+                  {{ block.settings.button_text }}
+                </a>
+
+              {% endif %}
+
+            </div>
+
+
+            <!-- IMAGE -->
+            <div class="magnetix-product-card__visual">
+
+              {% if block.settings.image != blank %}
+
+                {{
+                  block.settings.image
+                  | image_url: width: 1000
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '300, 400, 500, 600, 800, 1000',
+                    class: 'magnetix-product-card__image',
+                    alt: block.settings.title
+                }}
+
+              {% else %}
+
+                {{ 'product-1' | placeholder_svg_tag: 'magnetix-product-card__placeholder' }}
+
+              {% endif %}
+
+            </div>
+
+          </article>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =====================================
+     SECTION
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }} {
+    width: 100%;
+
+    background: {{ section.settings.section_background }};
+
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    overflow: hidden;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-essentials__container {
+
+    width: calc(100% - 40px);
+
+    max-width: {{ section.settings.max_width }}px;
+
+    margin: 0 auto;
+  }
+
+
+
+  /* =====================================
+     EN-TÊTE
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-essentials__header {
+
+    text-align: center;
+
+    margin-bottom: {{ section.settings.header_spacing }}px;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-essentials__title {
+
+    margin: 0;
+
+    color: {{ section.settings.title_color }};
+
+    font-size: {{ section.settings.title_size }}px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    letter-spacing: -0.035em;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-essentials__subtitle {
+
+    max-width: 850px;
+
+    margin: 14px auto 0;
+
+    color: {{ section.settings.subtitle_color }};
+
+    font-size: {{ section.settings.subtitle_size }}px;
+
+    line-height: 1.5;
+
+    font-weight: 400;
+  }
+
+
+
+  /* =====================================
+     GRILLE DES 3 PRODUITS
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-essentials__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: {{ section.settings.card_gap }}px;
+
+    width: 100%;
+  }
+
+
+
+  /* =====================================
+     CARTE
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    height: {{ section.settings.card_height }}px;
+
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        180deg,
+        {{ section.settings.card_top_color }} 0%,
+        {{ section.settings.card_top_color }} 42%,
+        {{ section.settings.card_bottom_color }} 100%
+      );
+
+    border-radius: {{ section.settings.card_radius }}px;
+
+    box-sizing: border-box;
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+
+
+  /* Hover PC */
+
+  @media screen and (min-width: 990px) {
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card:hover {
+
+      transform: translateY(-4px);
+
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card:hover
+    .magnetix-product-card__image {
+
+      transform: scale(1.035);
+    }
+
+  }
+
+
+
+  /* =====================================
+     PARTIE HAUTE
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__top {
+
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    min-height: 185px;
+
+    padding:
+      {{ section.settings.card_padding_top }}px
+      20px
+      10px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+
+  /* =====================================
+     TITRE PRODUIT
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__title {
+
+    margin: 0;
+
+    color: {{ section.settings.card_text_color }};
+
+    font-size: {{ section.settings.product_title_size }}px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: -0.015em;
+  }
+
+
+
+  /* =====================================
+     SOUS-TITRE PRODUIT
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__subtitle {
+
+    margin-top: 16px;
+
+    color: {{ section.settings.card_text_color }};
+
+    font-size: {{ section.settings.product_subtitle_size }}px;
+
+    line-height: 1.35;
+  }
+
+
+
+  /* =====================================
+     BOUTON
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 165px;
+    min-height: 46px;
+
+    margin-top: 30px;
+
+    padding: 8px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 999px;
+
+    border: {{ section.settings.button_border_width }}px solid
+      {{ section.settings.button_border_color }};
+
+    background: {{ section.settings.button_background }};
+
+    color: {{ section.settings.button_text_color }};
+
+    text-decoration: none;
+
+    font-size: {{ section.settings.button_text_size }}px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__button:hover {
+
+    transform: translateY(-1px);
+
+    background: {{ section.settings.button_hover_background }};
+
+    color: {{ section.settings.button_hover_text_color }};
+  }
+
+
+
+  /* =====================================
+     IMAGE
+  ===================================== */
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__visual {
+
+    position: relative;
+
+    flex: 1;
+
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding:
+      {{ section.settings.image_padding_top }}px
+      20px
+      {{ section.settings.image_padding_bottom }}px;
+
+    box-sizing: border-box;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__image {
+
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: {{ section.settings.image_width }}%;
+
+    max-height: {{ section.settings.image_height }}%;
+
+    object-fit: contain;
+
+    transition: transform 0.45s ease;
+  }
+
+
+  #magnetix-essentials-{{ section.id }}
+  .magnetix-product-card__placeholder {
+
+    width: 75%;
+    height: 75%;
+
+    opacity: 0.2;
+  }
+
+
+
+  /* =====================================
+     TABLETTE
+  ===================================== */
+
+  @media screen and (max-width: 989px) {
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__container {
+
+      width: calc(100% - 30px);
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__grid {
+
+      gap: 12px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card {
+
+      height: 500px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__title {
+
+      font-size: 19px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__subtitle {
+
+      font-size: 13px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__button {
+
+      min-width: 135px;
+
+      padding-left: 18px;
+      padding-right: 18px;
+
+      font-size: 13px;
+    }
+
+  }
+
+
+
+  /* =====================================
+     MOBILE
+     CARROUSEL MANUEL
+  ===================================== */
+
+  @media screen and (max-width: 749px) {
+
+    #magnetix-essentials-{{ section.id }} {
+
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__container {
+
+      width: 100%;
+
+      max-width: none;
+    }
+
+
+
+    /* En-tête */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__header {
+
+      margin-bottom: {{ section.settings.mobile_header_spacing }}px;
+
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__title {
+
+      font-size: {{ section.settings.mobile_title_size }}px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__subtitle {
+
+      margin-top: 9px;
+
+      font-size: {{ section.settings.mobile_subtitle_size }}px;
+
+      line-height: 1.4;
+    }
+
+
+
+    /* Zone défilante */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__scroll {
+
+      width: 100%;
+
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      -webkit-overflow-scrolling: touch;
+
+      scrollbar-width: none;
+
+      scroll-snap-type: x mandatory;
+
+      scroll-padding-left: {{ section.settings.mobile_side_space }}px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__scroll::-webkit-scrollbar {
+
+      display: none;
+    }
+
+
+
+    /* Liste */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-essentials__grid {
+
+      display: flex;
+
+      width: max-content;
+
+      gap: {{ section.settings.mobile_gap }}px;
+
+      padding-left: {{ section.settings.mobile_side_space }}px;
+      padding-right: {{ section.settings.mobile_side_space }}px;
+
+      box-sizing: border-box;
+    }
+
+
+
+    /* Carte */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card {
+
+      width: {{ section.settings.mobile_card_width }}px;
+
+      min-width: {{ section.settings.mobile_card_width }}px;
+
+      height: {{ section.settings.mobile_card_height }}px;
+
+      border-radius: {{ section.settings.mobile_card_radius }}px;
+
+      scroll-snap-align: start;
+
+      scroll-snap-stop: always;
+    }
+
+
+
+    /* Partie texte */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__top {
+
+      min-height: 155px;
+
+      padding:
+        {{ section.settings.mobile_card_padding_top }}px
+        15px
+        5px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__title {
+
+      font-size: {{ section.settings.mobile_product_title_size }}px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__subtitle {
+
+      margin-top: 10px;
+
+      font-size: {{ section.settings.mobile_product_subtitle_size }}px;
+    }
+
+
+
+    /* Bouton */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__button {
+
+      min-width: 145px;
+
+      min-height: 40px;
+
+      margin-top: 20px;
+
+      padding: 7px 20px;
+
+      font-size: {{ section.settings.mobile_button_size }}px;
+    }
+
+
+
+    /* Image */
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__visual {
+
+      padding:
+        5px
+        15px
+        16px;
+    }
+
+
+    #magnetix-essentials-{{ section.id }}
+    .magnetix-product-card__image {
+
+      max-width: {{ section.settings.mobile_image_width }}%;
+
+      max-height: {{ section.settings.mobile_image_height }}%;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Les essentiels Magnetix",
+  "max_blocks": 3,
+
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Titre de la section"
+    },
+
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Les essentiels Magnetix"
+    },
+
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Découvrez nos accessoires magnétiques conçus pour simplifier votre quotidien."
+    },
+
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#000000"
+    },
+
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Couleur du sous-titre",
+      "default": "#111111"
+    },
+
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille du titre PC",
+      "min": 24,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Taille du sous-titre PC",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 19
+    },
+
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Espace sous le titre",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+
+
+    {
+      "type": "header",
+      "content": "Section"
+    },
+
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Fond de la section",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 900,
+      "max": 1700,
+      "step": 50,
+      "unit": "px",
+      "default": 1250
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge supérieure",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 45
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge inférieure",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Cartes"
+    },
+
+    {
+      "type": "color",
+      "id": "card_top_color",
+      "label": "Couleur haute des cartes",
+      "default": "#FFF9EF"
+    },
+
+    {
+      "type": "color",
+      "id": "card_bottom_color",
+      "label": "Couleur basse des cartes",
+      "default": "#EAF3FF"
+    },
+
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Couleur des textes",
+      "default": "#111111"
+    },
+
+    {
+      "type": "range",
+      "id": "card_height",
+      "label": "Hauteur des cartes PC",
+      "min": 400,
+      "max": 750,
+      "step": 10,
+      "unit": "px",
+      "default": 580
+    },
+
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Arrondi des cartes",
+      "min": 0,
+      "max": 35,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Espace entre les cartes",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "range",
+      "id": "card_padding_top",
+      "label": "Marge haute dans les cartes",
+      "min": 15,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+
+    {
+      "type": "range",
+      "id": "product_title_size",
+      "label": "Taille des noms produits",
+      "min": 16,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+
+    {
+      "type": "range",
+      "id": "product_subtitle_size",
+      "label": "Taille des descriptions",
+      "min": 11,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+
+
+    {
+      "type": "header",
+      "content": "Images produits"
+    },
+
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Largeur maximale image PC",
+      "min": 40,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 82
+    },
+
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Hauteur maximale image PC",
+      "min": 40,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 88
+    },
+
+    {
+      "type": "range",
+      "id": "image_padding_top",
+      "label": "Espace au-dessus de l'image",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+
+    {
+      "type": "range",
+      "id": "image_padding_bottom",
+      "label": "Espace sous l'image",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+
+
+    {
+      "type": "header",
+      "content": "Boutons"
+    },
+
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Fond du bouton",
+      "default": "#000000"
+    },
+
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Texte du bouton",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Contour du bouton",
+      "default": "#000000"
+    },
+
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Épaisseur du contour",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Taille du texte du bouton",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Fond au survol",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Texte au survol",
+      "default": "#000000"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "label": "Taille du titre",
+      "min": 20,
+      "max": 38,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_subtitle_size",
+      "label": "Taille du sous-titre",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_header_spacing",
+      "label": "Espace sous le titre",
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "Largeur des cartes",
+      "min": 240,
+      "max": 360,
+      "step": 5,
+      "unit": "px",
+      "default": 300
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_height",
+      "label": "Hauteur des cartes",
+      "min": 380,
+      "max": 650,
+      "step": 10,
+      "unit": "px",
+      "default": 480
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_radius",
+      "label": "Arrondi des cartes",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace entre les cartes",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_side_space",
+      "label": "Marge sur les côtés",
+      "min": 10,
+      "max": 35,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_padding_top",
+      "label": "Marge haute dans les cartes",
+      "min": 15,
+      "max": 45,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_product_title_size",
+      "label": "Taille noms produits",
+      "min": 15,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 19
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_product_subtitle_size",
+      "label": "Taille descriptions",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_button_size",
+      "label": "Taille texte bouton",
+      "min": 11,
+      "max": 17,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_image_width",
+      "label": "Largeur image",
+      "min": 40,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 82
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_image_height",
+      "label": "Hauteur image",
+      "min": 40,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 90
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Marge supérieure section",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Marge inférieure section",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    }
+
+  ],
+
+
+  "blocks": [
+
+    {
+      "type": "product_card",
+      "name": "Produit",
+
+      "settings": [
+
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image du produit"
+        },
+
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nom du produit",
+          "default": "Batterie magnétique"
+        },
+
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Description",
+          "default": "Recharge magnétique sans fil"
+        },
+
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Texte du bouton",
+          "default": "Découvrir"
+        },
+
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Lien du produit"
+        }
+
+      ]
+
+    }
+
+  ],
+
+
+  "presets": [
+
+    {
+      "name": "Les essentiels Magnetix",
+
+      "blocks": [
+
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Batterie Magnétique",
+            "subtitle": "Puissance nomade et recharge sans fil",
+            "button_text": "Découvrir"
+          }
+        },
+
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Chargeur MagSafe",
+            "subtitle": "Une recharge magnétique simple et rapide",
+            "button_text": "Découvrir"
+          }
+        },
+
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Coque MagSafe",
+            "subtitle": "Protection élégante et fixation magnétique",
+            "button_text": "Découvrir"
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+{% endschema %}
