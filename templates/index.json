@@ -442,12 +442,36 @@
             "title": "Testimonial 3",
             "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
           }
+        },
+        "testimonial_dWEFV8": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        "testimonial_mtiWAr": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
         }
       },
       "block_order": [
         "testimonial_93h9Cm",
         "testimonial_tcw8Fb",
-        "testimonial_zmcXYL"
+        "testimonial_zmcXYL",
+        "testimonial_dWEFV8",
+        "testimonial_mtiWAr"
       ],
       "name": "Testimonials",
       "settings": {
