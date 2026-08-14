@@ -583,6 +583,13 @@
             "title": "Est-ce que la batterie chauffe pendant l'utilisation ?",
             "content": "<p>Une légère augmentation de température peut être normale lors d'une recharge sans fil. La batterie est conçue pour assurer une utilisation stable dans des conditions normales.</p>"
           }
+        },
+        "item_Bgcn4J": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je l'utiliser avec une coque de téléphone ?",
+            "content": "<p>Oui, à condition d'utiliser une coque compatible MagSafe ou suffisamment fine pour permettre une bonne connexion magnétique. Les coques très épaisses ou non magnétiques peuvent réduire la qualité de la fixation et de la recharge.</p>"
+          }
         }
       },
       "block_order": [
@@ -591,7 +598,8 @@
         "item_Vd6Cg7",
         "item_3ApnaR",
         "item_B8gr3D",
-        "item_ryA7Jg"
+        "item_ryA7Jg",
+        "item_Bgcn4J"
       ],
       "name": "FAQ",
       "settings": {
