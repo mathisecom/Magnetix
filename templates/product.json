@@ -545,29 +545,37 @@
         "item_kdPTgA": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "La batterie est-elle compatible avec MagSafe ?",
+            "content": "<p>Oui. La batterie est conçue pour se fixer magnétiquement aux iPhone compatibles MagSafe. Pour les autres smartphones, une coque magnétique compatible peut être nécessaire.</p>"
           }
         },
         "item_y8wqFA": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Comment utiliser la recharge magnétique ?",
+            "content": "<p>Il suffit de placer la batterie au dos de votre smartphone. Les aimants permettent de la positionner facilement et la recharge sans fil démarre automatiquement lorsque votre appareil est compatible.</p>"
           }
         },
         "item_Vd6Cg7": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "La batterie tient-elle bien sur le téléphone ?",
+            "content": "<p>Oui. La fixation magnétique est conçue pour maintenir la batterie correctement en place pendant une utilisation normale, tout en restant facile à retirer lorsque vous le souhaitez.</p>"
+          }
+        },
+        "item_3ApnaR": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je utiliser mon téléphone pendant la recharge ?",
+            "content": "<p>Oui. Son format compact permet de continuer à utiliser votre téléphone pour envoyer des messages, naviguer ou regarder du contenu pendant la recharge.</p>"
           }
         }
       },
       "block_order": [
         "item_kdPTgA",
         "item_y8wqFA",
-        "item_Vd6Cg7"
+        "item_Vd6Cg7",
+        "item_3ApnaR"
       ],
       "name": "FAQ",
       "settings": {
