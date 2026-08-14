@@ -218,6 +218,7 @@
         "product_card_M4MPhp": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_35_43.png",
             "title": "Batterie Magnétique",
             "subtitle": "Puissance nomade et recharge sans fil",
             "button_text": "Découvrir",
@@ -227,6 +228,7 @@
         "product_card_zimAzh": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_44_56.png",
             "title": "Chargeur MagSafe",
             "subtitle": "Une recharge magnétique simple et rapide",
             "button_text": "Découvrir",
@@ -236,6 +238,7 @@
         "product_card_HRDUDg": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_38_38.png",
             "title": "Coque MagSafe",
             "subtitle": "Protection élégante et fixation magnétique",
             "button_text": "Découvrir",
