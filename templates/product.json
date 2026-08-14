@@ -143,7 +143,7 @@
           "type": "associated_products",
           "settings": {
             "title": "Nos Clients ont Également Acheté :",
-            "stack_products": true,
+            "stack_products": false,
             "products_count": 5,
             "background": "",
             "text_color": ""
@@ -377,7 +377,7 @@
         "image_cDjCEP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_26_2.png",
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_16_20_35_2.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -473,7 +473,7 @@
         "image_wMNWRr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_26_3.png",
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_16_20_35_3.png",
             "media_width": 50,
             "media_position": "end",
             "text_position": "place-self-center text-center",
@@ -509,7 +509,7 @@
         "image_R7hNkt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_25_1.png",
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_16_20_35_1.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
