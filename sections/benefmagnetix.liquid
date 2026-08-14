@@ -1,0 +1,833 @@
+<section
+  id="magnetix-benefits-{{ section.id }}"
+  class="magnetix-benefits-section"
+>
+  <div class="magnetix-benefits-section__container">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="magnetix-benefits-section__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="magnetix-benefits-section__grid">
+
+      {% for block in section.blocks %}
+
+        <div
+          class="magnetix-benefits-section__item"
+          {{ block.shopify_attributes }}
+        >
+
+          <!-- ICÔNE -->
+          <div class="magnetix-benefits-section__icon">
+
+            {% case block.settings.icon %}
+
+              {% when 'thin' %}
+                <!-- ULTRA FIN -->
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M23 5H27V43H23V5Z"
+                    fill="currentColor"
+                  />
+
+                  <path
+                    d="M5 24H18"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M9 20L5 24L9 28"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M43 24H32"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M39 20L43 24L39 28"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+
+              {% when 'battery' %}
+                <!-- BATTERIE -->
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 5H30C34.4 5 38 8.6 38 13V39C38 41.2 36.2 43 34 43H14C11.8 43 10 41.2 10 39V13C10 8.6 13.6 5 18 5ZM18 9C15.8 9 14 10.8 14 13V39H34V13C34 10.8 32.2 9 30 9H18Z"
+                    fill="currentColor"
+                  />
+
+                  <path
+                    d="M20 1H28V5H20V1Z"
+                    fill="currentColor"
+                  />
+
+                  <path
+                    d="M18 14H30V35H18V14Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+
+              {% when 'magsafe' %}
+                <!-- MAGSAFE -->
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="8"
+                    y="3"
+                    width="32"
+                    height="42"
+                    rx="7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  />
+
+                  <circle
+                    cx="24"
+                    cy="20"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  />
+
+                  <path
+                    d="M24 29V36"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <circle
+                    cx="24"
+                    cy="41"
+                    r="1.8"
+                    fill="currentColor"
+                  />
+                </svg>
+
+
+              {% when 'fast' %}
+                <!-- ÉCLAIR -->
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M28 2L12 27H22L18 46L37 19H27L28 2Z"
+                    fill="currentColor"
+                  />
+
+                  <path
+                    d="M5 14H13"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M3 23H12"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M6 32H14"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+            {% endcase %}
+
+          </div>
+
+
+          <!-- TEXTE -->
+          <div class="magnetix-benefits-section__content">
+
+            {% if block.settings.title != blank %}
+              <h3 class="magnetix-benefits-section__title">
+                {{ block.settings.title }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="magnetix-benefits-section__text">
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =========================
+     SECTION
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }} {
+    width: 100%;
+
+    background: {{ section.settings.background_color }};
+
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    color: {{ section.settings.text_color }};
+  }
+
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__container {
+
+    width: calc(100% - 40px);
+
+    max-width: {{ section.settings.max_width }}px;
+
+    margin: 0 auto;
+  }
+
+
+  /* =========================
+     TITRE SECTION
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__heading {
+
+    margin: 0 0 38px;
+
+    text-align: center;
+
+    font-size: {{ section.settings.heading_size }}px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+
+    color: {{ section.settings.text_color }};
+  }
+
+
+  /* =========================
+     GRILLE
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: {{ section.settings.column_gap }}px;
+
+    row-gap: {{ section.settings.row_gap }}px;
+  }
+
+
+  /* =========================
+     BÉNÉFICE
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__item {
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    align-items: start;
+
+    gap: 22px;
+
+    min-width: 0;
+  }
+
+
+  /* =========================
+     ICÔNE
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__icon {
+
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: {{ section.settings.icon_color }};
+
+    flex-shrink: 0;
+  }
+
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__icon svg {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* =========================
+     TITRE BÉNÉFICE
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__title {
+
+    margin: 0;
+
+    color: {{ section.settings.text_color }};
+
+    font-size: {{ section.settings.title_size }}px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.015em;
+  }
+
+
+  /* =========================
+     DESCRIPTION
+  ========================== */
+
+  #magnetix-benefits-{{ section.id }}
+  .magnetix-benefits-section__text {
+
+    margin-top: 8px;
+
+    max-width: 400px;
+
+    color: {{ section.settings.description_color }};
+
+    font-size: {{ section.settings.description_size }}px;
+
+    font-weight: 400;
+
+    line-height: 1.55;
+  }
+
+
+  /* =========================
+     TABLETTE
+  ========================== */
+
+  @media screen and (max-width: 989px) {
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__container {
+
+      width: calc(100% - 32px);
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__grid {
+
+      column-gap: 35px;
+      row-gap: 35px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__item {
+
+      grid-template-columns: 55px 1fr;
+
+      gap: 16px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__icon {
+
+      width: 48px;
+      height: 48px;
+    }
+
+  }
+
+
+  /* =========================
+     MOBILE
+  ========================== */
+
+  @media screen and (max-width: 749px) {
+
+    #magnetix-benefits-{{ section.id }} {
+
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__container {
+
+      width: calc(100% - 32px);
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__heading {
+
+      margin-bottom: 28px;
+
+      font-size: {{ section.settings.mobile_heading_size }}px;
+    }
+
+
+    /* 1 bénéfice par ligne */
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__grid {
+
+      grid-template-columns: 1fr;
+
+      gap: {{ section.settings.mobile_gap }}px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__item {
+
+      grid-template-columns: 45px 1fr;
+
+      align-items: center;
+
+      gap: 16px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__icon {
+
+      width: {{ section.settings.mobile_icon_size }}px;
+
+      height: {{ section.settings.mobile_icon_size }}px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__title {
+
+      font-size: {{ section.settings.mobile_title_size }}px;
+    }
+
+
+    #magnetix-benefits-{{ section.id }}
+    .magnetix-benefits-section__text {
+
+      margin-top: 5px;
+
+      font-size: {{ section.settings.mobile_description_size }}px;
+
+      line-height: 1.45;
+    }
+
+  }
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Bénéfices Magnetix",
+  "max_blocks": 4,
+
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Section"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de la section"
+    },
+
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur des titres",
+      "default": "#1A1A1A"
+    },
+
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Couleur des descriptions",
+      "default": "#555555"
+    },
+
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Couleur des icônes",
+      "default": "#000000"
+    },
+
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1100
+    },
+
+
+    {
+      "type": "header",
+      "content": "Ordinateur"
+    },
+
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Taille titre section",
+      "min": 20,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille titres bénéfices",
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 21
+    },
+
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Taille descriptions",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Taille icônes",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 52
+    },
+
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Espace entre colonnes",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 70
+    },
+
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "Espace entre lignes",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 45
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 45
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 45
+    },
+
+
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "Taille titre section",
+      "min": 18,
+      "max": 34,
+      "step": 1,
+      "unit": "px",
+      "default": 25
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "label": "Taille titres bénéfices",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 17
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_description_size",
+      "label": "Taille descriptions",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_icon_size",
+      "label": "Taille icônes",
+      "min": 28,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace entre bénéfices",
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    }
+
+  ],
+
+
+  "blocks": [
+
+    {
+      "type": "benefit",
+      "name": "Bénéfice",
+
+      "settings": [
+
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icône",
+          "default": "thin",
+
+          "options": [
+
+            {
+              "value": "thin",
+              "label": "Ultra-fin"
+            },
+
+            {
+              "value": "battery",
+              "label": "Batterie"
+            },
+
+            {
+              "value": "magsafe",
+              "label": "MagSafe"
+            },
+
+            {
+              "value": "fast",
+              "label": "Recharge rapide"
+            }
+
+          ]
+        },
+
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Ultra-fine"
+        },
+
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Une batterie magnétique conçue pour se faire oublier."
+        }
+
+      ]
+
+    }
+
+  ],
+
+
+  "presets": [
+
+    {
+      "name": "Bénéfices Magnetix",
+
+      "blocks": [
+
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "thin",
+            "title": "Ultra-fine",
+            "text": "Un design ultra-fin et léger, pensé pour vous accompagner partout."
+          }
+        },
+
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "battery",
+            "title": "Batterie de secours instantanée",
+            "text": "L'énergie supplémentaire idéale pour votre smartphone lorsque vous en avez besoin."
+          }
+        },
+
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "magsafe",
+            "title": "Compatible MagSafe",
+            "text": "Fixation magnétique simple et recharge sans câble au quotidien."
+          }
+        },
+
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "fast",
+            "title": "Recharge rapide",
+            "text": "Rechargez rapidement votre batterie pour repartir sans attendre."
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+{% endschema %}
