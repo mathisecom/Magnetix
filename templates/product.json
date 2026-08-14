@@ -143,7 +143,7 @@
           "type": "associated_products",
           "settings": {
             "title": "Nos Clients ont Également Acheté :",
-            "stack_products": false,
+            "stack_products": true,
             "products_count": 5,
             "background": "",
             "text_color": ""
@@ -187,32 +187,6 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
-      }
-    },
-    "rich_text_PfMKDy": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_BepkEz": {
-          "type": "heading",
-          "settings": {
-            "text": "+3,000 Clients Satisfaits",
-            "heading_tag": "h2",
-            "text_color": "",
-            "gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_BepkEz"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "small",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
       }
     },
     "logoscroll_QMWeNd": {
@@ -281,6 +255,32 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
+      }
+    },
+    "rich_text_PfMKDy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BepkEz": {
+          "type": "heading",
+          "settings": {
+            "text": "+3,000 Clients Satisfaits",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BepkEz"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "testimonials_zxqFQr": {
