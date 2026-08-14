@@ -221,24 +221,21 @@
         "image_wr3kwe": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Forbes.avif",
             "url": ""
           }
         },
         "image_e8YpxN": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Digital_Trends_1.webp",
             "url": ""
           }
         },
         "image_mzQKqq": {
           "type": "image",
           "settings": {
-            "url": ""
-          }
-        },
-        "image_HfK3Gx": {
-          "type": "image",
-          "settings": {
+            "image": "shopify://shop_images/HowToGeek_1.avif",
             "url": ""
           }
         }
@@ -246,10 +243,8 @@
       "block_order": [
         "image_wr3kwe",
         "image_e8YpxN",
-        "image_mzQKqq",
-        "image_HfK3Gx"
+        "image_mzQKqq"
       ],
-      "disabled": true,
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
         "layout_radius": 30,
@@ -549,8 +544,8 @@
       "name": "Bénéfices Magnetix",
       "settings": {
         "heading": "",
-        "background_color": "#FFFFFF",
-        "text_color": "#1A1A1A",
+        "background_color": "#ffffff",
+        "text_color": "#1a1a1a",
         "description_color": "#555555",
         "icon_color": "#000000",
         "max_width": 1100,
@@ -704,8 +699,8 @@
   },
   "order": [
     "main",
-    "rich_text_PfMKDy",
     "logoscroll_QMWeNd",
+    "rich_text_PfMKDy",
     "testimonials_zxqFQr",
     "media_with_text_xpLGND",
     "scrolling_text_FcCwWR",
