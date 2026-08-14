@@ -280,7 +280,7 @@
         "padding_bottom": 0,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
-        "full_width": true,
+        "full_width": false,
         "content_width": 1200,
         "border_thickness": 0,
         "section_radius": 0,
@@ -295,7 +295,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 5,
+            "rating": 4,
             "author": "Lucas Martin",
             "title": "Très pratique au quotidien",
             "content": "<p>La batterie se fixe vraiment bien au téléphone et tient parfaitement en place. Très pratique quand je suis en déplacement, surtout sans câble.</p>"
@@ -317,7 +317,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 5,
+            "rating": 4,
             "author": "Thomas Bernard",
             "title": "La recharge magnétique change tout",
             "content": "<p>La fixation est simple et rapide. Je pose la batterie derrière mon téléphone et ça recharge directement. Très agréable à utiliser.</p>"
@@ -328,7 +328,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 5,
+            "rating": 4,
             "author": "Camille Moreau",
             "title": "Parfaite pour les déplacements",
             "content": "<p>Je l’utilise principalement quand je suis dehors toute la journée. Elle est discrète, légère et évite de devoir transporter un chargeur avec plusieurs câbles.</p>"
@@ -555,15 +555,15 @@
         "max_width": 1100,
         "heading_size": 30,
         "title_size": 21,
-        "description_size": 15,
+        "description_size": 16,
         "icon_size": 52,
         "column_gap": 70,
         "row_gap": 45,
-        "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_top": 45,
+        "padding_bottom": 45,
         "mobile_heading_size": 25,
         "mobile_title_size": 17,
-        "mobile_description_size": 13,
+        "mobile_description_size": 14,
         "mobile_icon_size": 40,
         "mobile_gap": 28,
         "mobile_padding_top": 15,

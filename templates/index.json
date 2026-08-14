@@ -548,15 +548,15 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "Vos produits sont-ils compatibles avec tous les smartphones ?",
+            "content": "<p>Nos accessoires magnétiques sont principalement conçus pour les smartphones compatibles avec la recharge sans fil et MagSafe. Pour certains modèles, l’utilisation d’une coque magnétique compatible peut être nécessaire.</p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Quels sont les délais de livraison ?",
+            "content": "<p>Votre commande est préparée et expédiée rapidement. Les délais de livraison peuvent varier selon votre destination et sont indiqués lors de la commande.</p>"
           }
         },
         "166442457738b23caf-2": {
