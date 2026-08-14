@@ -562,15 +562,31 @@
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Puis-je retourner ma commande si le produit ne me convient pas ?",
+            "content": "<p>Oui. Vous disposez de <strong>30 jours</strong> pour changer d’avis, conformément à nos conditions de retour. Notre service client reste disponible pour vous accompagner si nécessaire.</p>"
+          }
+        },
+        "item_96UUNt": {
+          "type": "item",
+          "settings": {
+            "title": "Mes produits sont-ils garantis ?",
+            "content": "<p>Oui. Nos produits bénéficient d’une <strong>garantie de 1 an</strong> couvrant les éventuels défauts de fabrication dans les conditions prévues par notre politique de garantie.</p>"
+          }
+        },
+        "item_j6qU8V": {
+          "type": "item",
+          "settings": {
+            "title": "Le paiement sur votre site est-il sécurisé ?",
+            "content": "<p>Oui. Les paiements sont traités via des solutions de paiement sécurisées et vos informations bancaires ne sont pas directement enregistrées par Magnetix.</p>"
           }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_96UUNt",
+        "item_j6qU8V"
       ],
       "settings": {
         "full_width": true,
