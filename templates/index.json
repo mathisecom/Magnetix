@@ -17,14 +17,15 @@
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_35_43.png",
             "title": "Batteries externes",
-            "link": ""
+            "link": "shopify://products/batterie-externe-magnetique"
           }
         },
         "category_UwAVVJ": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_38_38.png",
             "title": "Coques",
-            "link": ""
+            "link": "shopify://products/coque-magnetique-iphone"
           }
         },
         "category_PTGMtV": {
