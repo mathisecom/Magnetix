@@ -366,6 +366,7 @@
         "image_cDjCEP": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_26_2.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -461,6 +462,7 @@
         "image_wMNWRr": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_26_3.png",
             "media_width": 50,
             "media_position": "end",
             "text_position": "place-self-center text-center",
@@ -496,6 +498,7 @@
         "image_R7hNkt": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ChatGPTImage14aout2026_16_07_25_1.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
