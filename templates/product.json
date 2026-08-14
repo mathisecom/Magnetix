@@ -569,13 +569,29 @@
             "title": "Puis-je utiliser mon téléphone pendant la recharge ?",
             "content": "<p>Oui. Son format compact permet de continuer à utiliser votre téléphone pour envoyer des messages, naviguer ou regarder du contenu pendant la recharge.</p>"
           }
+        },
+        "item_B8gr3D": {
+          "type": "item",
+          "settings": {
+            "title": "Est-il possible de recharger avec un câble ?",
+            "content": "<p>Oui, selon le modèle, la batterie peut également être utilisée avec son port de charge pour une recharge filaire.</p>"
+          }
+        },
+        "item_ryA7Jg": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que la batterie chauffe pendant l'utilisation ?",
+            "content": "<p>Une légère augmentation de température peut être normale lors d'une recharge sans fil. La batterie est conçue pour assurer une utilisation stable dans des conditions normales.</p>"
+          }
         }
       },
       "block_order": [
         "item_kdPTgA",
         "item_y8wqFA",
         "item_Vd6Cg7",
-        "item_3ApnaR"
+        "item_3ApnaR",
+        "item_B8gr3D",
+        "item_ryA7Jg"
       ],
       "name": "FAQ",
       "settings": {
