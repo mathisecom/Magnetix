@@ -590,6 +590,13 @@
             "title": "Puis-je l'utiliser avec une coque de téléphone ?",
             "content": "<p>Oui, à condition d'utiliser une coque compatible MagSafe ou suffisamment fine pour permettre une bonne connexion magnétique. Les coques très épaisses ou non magnétiques peuvent réduire la qualité de la fixation et de la recharge.</p>"
           }
+        },
+        "item_RAGNth": {
+          "type": "item",
+          "settings": {
+            "title": "La batterie est-elle garantie ?",
+            "content": "<p>Oui, votre produit bénéficie de la garantie indiquée sur notre boutique. En cas de problème, notre service client est disponible pour vous accompagner.</p>"
+          }
         }
       },
       "block_order": [
@@ -599,7 +606,8 @@
         "item_3ApnaR",
         "item_B8gr3D",
         "item_ryA7Jg",
-        "item_Bgcn4J"
+        "item_Bgcn4J",
+        "item_RAGNth"
       ],
       "name": "FAQ",
       "settings": {
