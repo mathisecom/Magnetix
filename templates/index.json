@@ -175,6 +175,8 @@
         "gap": 20,
         "padding_top": 30,
         "padding_bottom": 30,
+        "hero_image": "shopify://shop_images/ChatGPTImage14aout2026_16_20_35_1.png",
+        "hero_mobile_image": "shopify://shop_images/ChatGPTImage14aout2026_16_20_35_1.png",
         "hero_title": "Batteries Sans Fil",
         "hero_subtitle": "La puissance qui vous suit partout",
         "hero_button_text": "Découvrir",
