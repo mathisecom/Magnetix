@@ -489,6 +489,41 @@
         "alternate_media_position": false,
         "spacing": "small"
       }
+    },
+    "media_with_text_e8Bgbz": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_R7hNkt": {
+          "type": "image",
+          "settings": {
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Votre batterie de secours idéale",
+            "content": "<p>Gardez toujours de l’énergie à portée de main avec la <strong>Magnetix</strong>. Sa batterie de <strong>3 000 mAh</strong>, intégrée dans un format ultra-fin et léger, vous offre le complément d’autonomie idéal pour vos déplacements.</p>",
+            "link_text": "Obtenir Maintenant",
+            "link_url": "",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_R7hNkt"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
     }
   },
   "order": [
@@ -499,6 +534,7 @@
     "media_with_text_xpLGND",
     "scrolling_text_FcCwWR",
     "slideshow_whn7TT",
-    "media_with_text_6r8JhQ"
+    "media_with_text_6r8JhQ",
+    "media_with_text_e8Bgbz"
   ]
 }
