@@ -31,8 +31,9 @@
         "category_PTGMtV": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_aout_2026_15_42_08.png",
             "title": "Chargeurs sans fil",
-            "link": ""
+            "link": "shopify://products/chargeur-sans-fil"
           }
         },
         "category_xpJpEe": {
