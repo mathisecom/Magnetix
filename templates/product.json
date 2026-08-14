@@ -280,7 +280,7 @@
         "padding_bottom": 0,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
-        "full_width": false,
+        "full_width": true,
         "content_width": 1200,
         "border_thickness": 0,
         "section_radius": 0,
@@ -295,7 +295,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
+            "rating": 5,
             "author": "Lucas Martin",
             "title": "Très pratique au quotidien",
             "content": "<p>La batterie se fixe vraiment bien au téléphone et tient parfaitement en place. Très pratique quand je suis en déplacement, surtout sans câble.</p>"
@@ -317,7 +317,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
+            "rating": 5,
             "author": "Thomas Bernard",
             "title": "La recharge magnétique change tout",
             "content": "<p>La fixation est simple et rapide. Je pose la batterie derrière mon téléphone et ça recharge directement. Très agréable à utiliser.</p>"
@@ -328,7 +328,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
+            "rating": 5,
             "author": "Camille Moreau",
             "title": "Parfaite pour les déplacements",
             "content": "<p>Je l’utilise principalement quand je suis dehors toute la journée. Elle est discrète, légère et évite de devoir transporter un chargeur avec plusieurs câbles.</p>"
